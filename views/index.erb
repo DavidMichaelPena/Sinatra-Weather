@@ -3,7 +3,22 @@
   <link href="/style.css" rel="stylesheet"/>
   </head>
   <body>
+  <main>
     <h2>The weather right now in Minneapolis</h2>
     <h1><%= @temp %>&deg;</h1>
+    </main>
+    <footer>
+    <ul>
+    <% @cities.each do |city| %>
+      <li><a href="/?city=<%= URI.escape(city) %>"><%= city %></a></li>
+      <% end %>
+    </ul>
+    <p>
+        Built with <heart>❤️</heart> 
+        by <a href="http://github.com/DavidMichaelPena">David Michael Pena</a>
+        from <a href="http://thefirehoseproject.com">Firehose</a>
+      </p>
+
+    </footer>
   </body>
   </html>
