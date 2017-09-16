@@ -6,6 +6,12 @@
   <main>
     <h2>The weather right now in Minneapolis</h2>
     <h1><%= @temp %>&deg;</h1>
+    <div>
+    <% @icons.each do |icon| %>
+      <img src="<%= icon %>" alt="weather icon" />
+      <% end %> 
+    </div>
+
     </main>
     <footer>
     <ul>
@@ -17,6 +23,7 @@
         Built with <heart>❤️</heart> 
         by <a href="http://github.com/DavidMichaelPena">David Michael Pena</a>
         from <a href="http://thefirehoseproject.com">Firehose</a>
+        Icons by <a href="flaticon.com">flaticon</a>.
       </p>
 
     </footer>

@@ -6,6 +6,14 @@ class Weather
     @city = city
   end
 
+  def icons
+    data = weather_data
+    return [] if data.nil? || data['weather'].nil? 
+    data['weather'].collect do |weather|
+      weather['icon'] + ".png"
+    end.uniq
+  end
+
   def weather_data
 
     resp = HTTParty.get(
