@@ -4,8 +4,8 @@
   </head>
   <body>
   <main>
-    <h2>The weather right now in Minneapolis</h2>
-    <h1><%= @temp %>&deg;</h1>
+    <h2>The weather right now in <%= @city %> </h2>
+    <h1><%= @temp.round %>&deg;</h1>
     <div>
     <% @icons.each do |icon| %>
       <img src="<%= icon %>" alt="weather icon" />
